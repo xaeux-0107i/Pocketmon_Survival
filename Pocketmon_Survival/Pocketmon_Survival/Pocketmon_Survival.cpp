@@ -1,8 +1,14 @@
 #include <windows.h>
+#include "Map.h"
+#include "StageUI.h"
+#include "resource.h"
+
+//WIDTH  200		// x 24
+//HEIGHT 100		//당니 이건 임시로 해놓은거얌~
 
 HINSTANCE g_hInst;
 LPCTSTR lpszClass = L"Window Class Name";
-LPCTSTR lpszWindowName = L"windows program 2";
+LPCTSTR lpszWindowName = L"Poketmon Survival";
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam);
 
@@ -28,7 +34,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 	WndClass.hIconSm = LoadIcon(NULL, IDI_QUESTION);
 	RegisterClassEx(&WndClass);
 
-	hWnd = CreateWindow(lpszClass, lpszWindowName, WS_OVERLAPPEDWINDOW, 100, 50, 800, 600, NULL, (HMENU)NULL, hInstance, NULL);
+	hWnd = CreateWindow(lpszClass, lpszWindowName, WS_OVERLAPPEDWINDOW, 100, 50, 1200, 600, NULL, (HMENU)NULL, hInstance, NULL);
 	ShowWindow(hWnd, nCmdShow);
 	UpdateWindow(hWnd);
 
@@ -43,13 +49,29 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	PAINTSTRUCT ps;
-	HDC hDC;
+	HDC hDC, mDC;
+	HBITMAP hBitmap;
+	static HBITMAP hbitmapMap0;
+	RECT rt;
 
 	switch (uMsg) {
 	case WM_CREATE:
+		hbitmapMap0 = (HBITMAP)LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP1));
 		break;
 	case WM_PAINT:
+		GetClientRect(hWnd, &rt);
 		hDC = BeginPaint(hWnd, &ps);
+		mDC = CreateCompatibleDC(hDC);											//더블 버퍼링
+		hBitmap = CreateCompatibleBitmap(hDC, rt.right, rt.bottom);				
+		SelectObject(mDC, (HBITMAP)hBitmap);									
+		Rectangle(mDC, 0, 0, rt.right, rt.bottom);		
+
+		DrawGrassMap(mDC, hbitmapMap0);
+		//DrawEXP_Bar(mDC);
+
+		BitBlt(hDC, 0, 0, rt.right, rt.bottom, mDC, 0, 0, SRCCOPY);
+		DeleteDC(mDC);
+		DeleteObject(hBitmap);
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_DESTROY:
