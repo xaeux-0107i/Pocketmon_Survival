@@ -27,6 +27,9 @@
     <ClCompile Include="StageUI.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Monsters.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -38,6 +41,9 @@
     <ClInclude Include="StageUI.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Monsters.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc">
@@ -46,6 +52,42 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="D:\윈도우 프로그래밍\PoketmonSurvivalTest\ps_map1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Back1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Back2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Back3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_front1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_front2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_front3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Left1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Left2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Left3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Right1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Right2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Right3.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

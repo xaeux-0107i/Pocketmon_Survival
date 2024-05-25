@@ -128,12 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Monsters.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Pocketmon_Survival.cpp" />
     <ClCompile Include="StageUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Monsters.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="StageUI.h" />
   </ItemGroup>
@@ -142,6 +144,18 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="D:\윈도우 프로그래밍\PoketmonSurvivalTest\ps_map1.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Back1.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Back2.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Back3.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_front1.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_front2.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_front3.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Left1.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Left2.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Left3.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Right1.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Right2.bmp" />
+    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Right3.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

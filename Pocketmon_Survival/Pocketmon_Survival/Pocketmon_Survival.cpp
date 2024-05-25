@@ -1,5 +1,6 @@
 #include <windows.h>
 #include "Map.h"
+#include "Monsters.h"
 #include "StageUI.h"
 #include "resource.h"
 
@@ -68,6 +69,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 		DrawGrassMap(mDC, hbitmapMap0);
 		//DrawEXP_Bar(mDC);
+		DrawGyarados(g_hInst, mDC);
 
 		BitBlt(hDC, 0, 0, rt.right, rt.bottom, mDC, 0, 0, SRCCOPY);
 		DeleteDC(mDC);
