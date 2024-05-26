@@ -54,10 +54,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	HBITMAP hBitmap;
 	static HBITMAP hbitmapMap0;
 	RECT rt;
+	
+	static int Timer1Count = 0;		//게임 플레이 타이머
+
 
 	switch (uMsg) {
 	case WM_CREATE:
 		hbitmapMap0 = (HBITMAP)LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP1));
+		
 		break;
 	case WM_PAINT:
 		GetClientRect(hWnd, &rt);
@@ -68,13 +72,26 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		Rectangle(mDC, 0, 0, rt.right, rt.bottom);		
 
 		DrawGrassMap(mDC, hbitmapMap0);
-		//DrawEXP_Bar(mDC);
-		DrawGyarados(g_hInst, mDC);
 
+		//stage UI
+		DrawEXP_Bar(mDC);
+		TimeBar(mDC, Timer1Count);
+		
 		BitBlt(hDC, 0, 0, rt.right, rt.bottom, mDC, 0, 0, SRCCOPY);
 		DeleteDC(mDC);
 		DeleteObject(hBitmap);
 		EndPaint(hWnd, &ps);
+		break;
+	case WM_KEYDOWN:
+		SetTimer(hWnd, 1, 1000, NULL);
+		break;
+	case WM_TIMER:
+		switch (wParam) {
+		case 1:
+			Timer1Count++;
+			break;
+		}
+		InvalidateRect(hWnd, NULL, false);
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
