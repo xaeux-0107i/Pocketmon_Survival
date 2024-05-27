@@ -55,7 +55,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	static HBITMAP hbitmapMap0;
 	RECT rt;
 	
-	static int Timer1Count = 0;		//게임 플레이 타이머
+	static int Timer1Count, gamePlayminute = 0;		//게임 플레이 타이머
 
 
 	switch (uMsg) {
@@ -75,7 +75,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 		//stage UI
 		DrawEXP_Bar(mDC);
-		TimeBar(mDC, Timer1Count);
+		TimeBar(mDC, Timer1Count, gamePlayminute);
 		
 		BitBlt(hDC, 0, 0, rt.right, rt.bottom, mDC, 0, 0, SRCCOPY);
 		DeleteDC(mDC);
@@ -83,12 +83,16 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_KEYDOWN:
-		SetTimer(hWnd, 1, 1000, NULL);
+		SetTimer(hWnd, 1, 100, NULL);
 		break;
 	case WM_TIMER:
 		switch (wParam) {
 		case 1:
 			Timer1Count++;
+			if (Timer1Count > 59) {
+					Timer1Count = 0;
+				gamePlayminute++;
+			}
 			break;
 		}
 		InvalidateRect(hWnd, NULL, false);

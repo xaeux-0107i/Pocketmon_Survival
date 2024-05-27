@@ -3,18 +3,12 @@
 
 TCHAR gamePlayTime[20];
 HFONT hFont, oldfont;
-int gamePlayminute;
 
 void DrawEXP_Bar(HDC mDC) {
 	RoundRect(mDC, 100, 0, 1100, 30, 20, 20);
 }
 
-void TimeBar(HDC mDC, int Timer1Count) {
-	if (Timer1Count > 60) {
-		gamePlayminute++;
-		Timer1Count = 0;
-	}
-	
+void TimeBar(HDC mDC, int Timer1Count, int gamePlayminute) {
 
 	hFont = CreateFont(30, 0, 0, 0, 0, 0, 0, 0, HANGEUL_CHARSET, 0, 0, 0, 0, _T("±Ã¼­"));
 	oldfont = (HFONT)SelectObject(mDC, hFont);
