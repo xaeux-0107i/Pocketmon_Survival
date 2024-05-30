@@ -51,9 +51,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="D:\윈도우 프로그래밍\PoketmonSurvivalTest\ps_map1.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
     <Image Include="..\..\monsters_bitmap\Gyarados_Back1.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
@@ -88,42 +85,6 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="..\..\monsters_bitmap\Gyarados_Right3.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Back1.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Back2.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Back3.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_front1.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_front2.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_front3.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Left1.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Left2.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Left3.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Right1.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Right2.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="D:\윈도우 프로그래밍\workspace\window_programming5-4\Gyarados_Right3.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="..\..\map_bitmap\ps_map1.bmp">
