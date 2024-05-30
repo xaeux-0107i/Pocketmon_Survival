@@ -143,6 +143,7 @@
     <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\map_bitmap\ps_map1.bmp" />
     <Image Include="..\..\monsters_bitmap\Gyarados_Back1.bmp" />
     <Image Include="..\..\monsters_bitmap\Gyarados_Back2.bmp" />
     <Image Include="..\..\monsters_bitmap\Gyarados_Back3.bmp" />
